@@ -7,6 +7,9 @@ import routes from './Routes/Routes'
 require('style!css!foundation-sites/dist/css/foundation.min.css')
 $(document).foundation();
 
+//App Styles
+require('style!css!applicationStyles');
+
 ReactDOM.render((
     <Router history={browserHistory} routes={routes}/>
 ), document.getElementById("app") );
