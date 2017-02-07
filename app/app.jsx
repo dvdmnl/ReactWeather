@@ -8,7 +8,7 @@ require('style!css!foundation-sites/dist/css/foundation.min.css')
 $(document).foundation();
 
 //App Styles
-require('style!css!applicationStyles');
+require('style!css!sass!applicationStyles');
 
 ReactDOM.render((
     <Router history={browserHistory} routes={routes}/>
