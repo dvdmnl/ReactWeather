@@ -12,6 +12,13 @@ class Nav extends Component {
 
     onSearch = (e) => {
         e.preventDefault();
+        var location = this.refs.search.value;
+        var encodeLocation = encodeURIComponent(location);
+
+        if(location.length > 0) {
+            this.refs.search.value = '';
+            window.location.hash = '#/?location=' + encodeLocation;
+        }
     }
 
     render(){
@@ -29,7 +36,7 @@ class Nav extends Component {
                     <form onSubmit={this.onSearch}>
                         <ul className="menu">
                             <li>
-                                <input type="search" placeholder="Search Weather by City"/>
+                                <input type="search" ref="search" placeholder="Search Weather by City"/>
                             </li>
                             <li>
                                 <input type="submit" className="button" value="Get Weather"/>

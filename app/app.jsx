@@ -11,5 +11,5 @@ $(document).foundation();
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render((
-    <Router history={browserHistory} routes={routes}/>
+    <Router history={hashHistory} routes={routes}/>
 ), document.getElementById("app") );
